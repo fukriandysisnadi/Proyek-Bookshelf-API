@@ -164,22 +164,22 @@ const { id } = request.params;
         readPage,
         reading,
         updatedAt,
-      };
+    };
 
-      const response = h.response({
+    const response = h.response({
         status: 'success',
         message: 'Buku berhasil diperbarui',
-      });
-      response.code(200);
-      return response;
+    });
+    response.code(200);
+    return response;
     }
 
-      const response = h.response({
+    const response = h.response({
         status: 'fail',
         message: 'Gagal memperbarui buku. Id tidak ditemukan',
-      });
-      response.code(404);
-      return response;
+    });
+    response.code(404);
+    return response;
 };
 
 const deleteBookByIdHandler = (request, h) => {
